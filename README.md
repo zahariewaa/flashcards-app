@@ -1,75 +1,67 @@
-# LearnHub - Interactive Math & Python Learning Platform
+# LearnHub - Interactive Learning Platform
 
-![LearnHub](https://images.unsplash.com/photo-1509869175650-a1d97972541a?auto=format&fit=crop&q=80&w=2000&h=600)
+LearnHub is a comprehensive educational platform that combines mathematical visualization, programming concepts, and algorithm understanding in one interactive experience.
 
-LearnHub is a modern web application that combines interactive mathematical visualization tools with Python programming flashcards, providing an engaging learning experience for students and developers.
+## Features
 
-## 🚀 Features
+### 1. Math Expression Visualizer
+- Plot mathematical functions with real-time visualization
+- Interactive graph manipulation
+- Step-by-step equation solving
+- Support for various mathematical operations and functions
 
-### Math Expression Visualizer
-- Interactive function plotting with real-time updates
-- Support for complex mathematical expressions
-- Step-by-step equation solver
-- Customizable graph range and visualization options
-
-### Python Flashcards
-- Interactive flashcard system for Python concepts
-- Code examples and explanations
-- Progress tracking
+### 2. Python Flashcards
+- Interactive flashcards for learning Python concepts
 - Categories covering syntax, data types, and functions
+- Code examples and explanations
+- Progress tracking and self-paced learning
 
-## 🛠️ Technologies
+### 3. Algorithm Visualizer
+- Interactive visualization of sorting algorithms
+- Step-by-step animation with adjustable speed
+- Color-coded visualization for better understanding
+- Detailed explanations of algorithm complexity and behavior
 
-- React 18
-- TypeScript
-- Tailwind CSS
-- React Router DOM
-- Math.js
-- Recharts
-- Lucide React Icons
+## Getting Started
 
-## 📦 Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/zahariewaa/flashcards-app.git
-cd learnhub
-```
-
+1. Clone the repository
 2. Install dependencies:
-```bash
-npm install
-```
-
+   ```bash
+   npm install
+   ```
 3. Start the development server:
-```bash
-npm run dev
+   ```bash
+   npm run dev
+   ```
+
+## Tech Stack
+
+- React with TypeScript
+- Tailwind CSS for styling
+- React Router for navigation
+- Recharts for mathematical graphs
+- Math.js for mathematical operations
+- Lucide React for icons
+
+## Project Structure
+
+```
+src/
+├── components/         # Reusable UI components
+├── pages/             # Page components
+├── context/           # React context providers
+├── utils/             # Utility functions
+└── data/             # Static data and configurations
 ```
 
-## 🎯 Usage
+## Contributing
 
-### Math Visualizer
-1. Navigate to the Math Visualizer page
-2. Enter mathematical expressions using standard notation
-3. Customize the graph range using the input fields
-4. Switch between the graph visualizer and equation solver using the tabs
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a new Pull Request
 
-### Python Flashcards
-1. Go to the Python Flashcards section
-2. Click cards to flip between questions and answers
-3. Use the navigation buttons to move between cards
-4. Review explanations and code examples
+## License
 
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
----
-
-Made with ❤️ by Anastasia Zaharieva
+MIT License - feel free to use this project for learning and development purposes.

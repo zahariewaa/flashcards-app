@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Code, BookOpen } from 'lucide-react';
+import { Code } from 'lucide-react';
 import { FlashCard } from '../components/FlashCard';
 import { flashcards } from '../data/flashcards';
 
-const PythonFlashcards = () => {
+const PythonFlashcards: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
 
@@ -29,12 +29,12 @@ const PythonFlashcards = () => {
           <h1 className="text-3xl font-bold text-gray-800">Python Flashcards</h1>
         </div>
         <p className="text-gray-600 max-w-2xl mx-auto">
-          Master Python programming concepts through interactive flashcards.
+          Master Python programming concepts with interactive flashcards.
           Test your knowledge and learn at your own pace.
         </p>
       </div>
 
-      <div className="flex flex-col items-center justify-center gap-8">
+      <div className="flex justify-center">
         <FlashCard
           card={flashcards[currentIndex]}
           isFlipped={isFlipped}
@@ -44,27 +44,6 @@ const PythonFlashcards = () => {
           total={flashcards.length}
           current={currentIndex}
         />
-
-        <div className="bg-white p-6 rounded-xl shadow-lg max-w-2xl w-full">
-          <div className="flex items-center gap-2 mb-4">
-            <BookOpen className="text-indigo-600" size={24} />
-            <h2 className="text-xl font-semibold text-gray-800">Study Tips</h2>
-          </div>
-          <ul className="space-y-2 text-gray-600">
-            <li className="flex items-center gap-2">
-              • Click on the card to flip between question and answer
-            </li>
-            <li className="flex items-center gap-2">
-              • Try to answer before revealing the solution
-            </li>
-            <li className="flex items-center gap-2">
-              • Review the explanation and example code carefully
-            </li>
-            <li className="flex items-center gap-2">
-              • Practice writing the code examples yourself
-            </li>
-          </ul>
-        </div>
       </div>
     </div>
   );

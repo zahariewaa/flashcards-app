@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Brain, LineChart, Code } from 'lucide-react';
+import { Brain, LineChart, Code, GitGraph } from 'lucide-react';
 
 const Navbar = () => {
   const location = useLocation();
@@ -9,6 +9,7 @@ const Navbar = () => {
     { to: '/', label: 'Home', icon: Brain },
     { to: '/math', label: 'Math Visualizer', icon: LineChart },
     { to: '/python', label: 'Python Flashcards', icon: Code },
+    { to: '/algorithms', label: 'Algorithm Visualizer', icon: GitGraph },
   ];
 
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { LineChart, Code, Brain, ArrowRight, Users, Sparkles, Rocket } from 'lucide-react';
+import { LineChart, Code, Brain, ArrowRight, Users, Sparkles, GitGraph } from 'lucide-react';
 
 const Home = () => {
   const features = [
@@ -26,12 +26,12 @@ const Home = () => {
       {/* Hero Section */}
       <div className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          Master Math & Python with Interactive Tools
+          Master Programming & Math Interactively
         </h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
-          Explore mathematical concepts and learn Python programming through our interactive visualization tools and flashcards.
+          Explore mathematical concepts, learn Python programming, and visualize algorithms through our interactive tools.
         </p>
-        <div className="flex justify-center gap-4">
+        <div className="flex flex-wrap justify-center gap-4">
           <Link
             to="/math"
             className="inline-flex items-center gap-2 bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors"
@@ -45,6 +45,13 @@ const Home = () => {
           >
             <Code size={20} />
             Start Python Flashcards
+          </Link>
+          <Link
+            to="/algorithms"
+            className="inline-flex items-center gap-2 bg-white text-indigo-600 px-6 py-3 rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-colors"
+          >
+            <GitGraph size={20} />
+            Explore Algorithms
           </Link>
         </div>
       </div>
@@ -61,14 +68,14 @@ const Home = () => {
       </div>
 
       {/* Tools Overview */}
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid md:grid-cols-3 gap-8">
         <div className="bg-white p-8 rounded-xl shadow-md">
           <div className="flex items-center gap-3 mb-4">
             <LineChart className="text-indigo-600" size={32} />
-            <h2 className="text-2xl font-bold text-gray-800">Math Expression Visualizer</h2>
+            <h2 className="text-2xl font-bold text-gray-800">Math Visualizer</h2>
           </div>
           <p className="text-gray-600 mb-6">
-            Plot mathematical functions, visualize equations, and solve mathematical problems step by step. Perfect for understanding complex mathematical concepts.
+            Plot mathematical functions, visualize equations, and solve mathematical problems step by step.
           </p>
           <Link
             to="/math"
@@ -84,13 +91,29 @@ const Home = () => {
             <h2 className="text-2xl font-bold text-gray-800">Python Flashcards</h2>
           </div>
           <p className="text-gray-600 mb-6">
-            Master Python programming concepts with our interactive flashcard system. Learn syntax, data types, functions, and more through spaced repetition.
+            Master Python programming concepts with our interactive flashcard system. Learn syntax, data types, and functions.
           </p>
           <Link
             to="/python"
             className="inline-flex items-center text-indigo-600 hover:text-indigo-700"
           >
             Start Learning Python <ArrowRight className="ml-2" size={18} />
+          </Link>
+        </div>
+
+        <div className="bg-white p-8 rounded-xl shadow-md">
+          <div className="flex items-center gap-3 mb-4">
+            <GitGraph className="text-indigo-600" size={32} />
+            <h2 className="text-2xl font-bold text-gray-800">Algorithm Visualizer</h2>
+          </div>
+          <p className="text-gray-600 mb-6">
+            Watch sorting algorithms in action and understand how they work through interactive visualizations.
+          </p>
+          <Link
+            to="/algorithms"
+            className="inline-flex items-center text-indigo-600 hover:text-indigo-700"
+          >
+            Explore Algorithms <ArrowRight className="ml-2" size={18} />
           </Link>
         </div>
       </div>
