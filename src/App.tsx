@@ -4,9 +4,10 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import MathVisualizer from './pages/MathVisualizer';
 import PythonFlashcards from './pages/PythonFlashcards';
+import AlgorithmVisualizer from './pages/AlgorithmVisualizer';
 import { TabProvider } from './context/TabContext';
 
-function App() {
+const App: React.FC = () => {
   return (
     <BrowserRouter>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50">
@@ -19,10 +20,11 @@ function App() {
             </TabProvider>
           } />
           <Route path="/python" element={<PythonFlashcards />} />
+          <Route path="/algorithms" element={<AlgorithmVisualizer />} />
         </Routes>
       </div>
     </BrowserRouter>
   );
-}
+};
 
 export default App;
