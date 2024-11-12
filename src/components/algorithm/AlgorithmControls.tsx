@@ -1,9 +1,11 @@
 import React from 'react';
 import { Play, Pause, RotateCcw, Settings } from 'lucide-react';
 
+type Algorithm = 'bubble' | 'quick' | 'insertion' | 'merge' | 'selection' | 'heap' | 'shell' | 'counting';
+
 interface AlgorithmControlsProps {
-  algorithm: 'bubble' | 'quick';
-  setAlgorithm: (algo: 'bubble' | 'quick') => void;
+  algorithm: Algorithm;
+  setAlgorithm: (algo: Algorithm) => void;
   speed: number;
   setSpeed: (speed: number) => void;
   isRunning: boolean;
@@ -27,11 +29,18 @@ const AlgorithmControls: React.FC<AlgorithmControlsProps> = ({
       <div className="flex gap-4 items-center">
         <select
           value={algorithm}
-          onChange={(e) => setAlgorithm(e.target.value as 'bubble' | 'quick')}
+          onChange={(e) => setAlgorithm(e.target.value as Algorithm)}
           className="px-3 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500"
+          disabled={isRunning}
         >
           <option value="bubble">Bubble Sort</option>
           <option value="quick">Quick Sort</option>
+          <option value="insertion">Insertion Sort</option>
+          <option value="merge">Merge Sort</option>
+          <option value="selection">Selection Sort</option>
+          <option value="heap">Heap Sort</option>
+          <option value="shell">Shell Sort</option>
+          <option value="counting">Counting Sort</option>
         </select>
 
         <div className="flex items-center gap-2">
@@ -43,6 +52,7 @@ const AlgorithmControls: React.FC<AlgorithmControlsProps> = ({
             value={speed}
             onChange={(e) => setSpeed(Number(e.target.value))}
             className="w-32"
+            disabled={isRunning}
           />
           <span className="text-sm text-gray-600">{speed}ms</span>
         </div>
@@ -51,7 +61,8 @@ const AlgorithmControls: React.FC<AlgorithmControlsProps> = ({
       <div className="flex gap-2">
         <button
           onClick={onReset}
-          className="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50"
+          disabled={isRunning}
+          className="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <RotateCcw size={18} />
           Reset
